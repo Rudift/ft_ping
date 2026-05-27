@@ -1,25 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vdeliere <vdeliere@student.42.fr>          #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026-05-26 12:45:34 by vdeliere          #+#    #+#             */
-/*   Updated: 2026-05-26 12:45:34 by vdeliere         ###   ########.fr       */
+/*   Created: 2026-05-27 14:42:30 by vdeliere          #+#    #+#             */
+/*   Updated: 2026-05-27 14:42:30 by vdeliere         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_ping.h"
 
-int main (int ac, char **av){
-    if (ac < 2){
-        printf("usage: ./ft_ping <option> <destination>\n");
-        return 1;
-    }
-    s_cmd cmd;
-    init_cmd(&cmd);
-    parse_cmd(ac, av, &cmd);
-    print_cmd(&cmd);
-    return 0;
+void init_cmd(s_cmd *cmd){
+    bzero(cmd, sizeof(*cmd));
 }

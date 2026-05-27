@@ -13,10 +13,26 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+#include <stdbool.h>
 
 #ifndef FT_PING_H
 #define FT_PING_H
 
+    typedef struct t_cmd{
+        char    *opt;
+        char    *dest;
+    } s_cmd;
 
+    // Parsing
+    int isoption(char* s);
+    void parse_cmd(int ac, char **av, s_cmd *cmd);
+
+    // Init
+    void init_cmd(s_cmd *cmd);
+
+    // Printers
+    void    print_cmd(s_cmd *cmd);
 
 #endif

@@ -3,7 +3,11 @@ CFLAGS = -Wall -Wextra -Werror
 
 TARGET = ft_ping
 
-SRC = main.c
+SRC = main.c \
+		parsing.c \
+		init.c \
+		printer.c
+
 HEADERS = ft_ping.h
 OBJ_DIR = obj
 OBJ = $(SRC:%.c=$(OBJ_DIR)/%.o)
