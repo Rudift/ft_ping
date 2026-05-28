@@ -26,7 +26,7 @@
     } s_cmd;
 
     // Parsing
-    int isoption(char* s);
+    int isoption(s_cmd* cmd,char* s);
     void parse_cmd(int ac, char **av, s_cmd *cmd);
 
     // Init
@@ -34,5 +34,8 @@
 
     // Printers
     void    print_cmd(s_cmd *cmd);
+
+    // Error handler
+    void err_option(s_cmd *cmd, char fail_opt);
 
 #endif

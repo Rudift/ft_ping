@@ -6,7 +6,8 @@ TARGET = ft_ping
 SRC = main.c \
 		parsing.c \
 		init.c \
-		printer.c
+		printer.c \
+		error.c
 
 HEADERS = ft_ping.h
 OBJ_DIR = obj
