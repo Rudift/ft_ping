@@ -16,6 +16,8 @@
 #include <ctype.h>
 #include <string.h>
 #include <stdbool.h>
+#include <arpa/inet.h>
+#include <signal.h>
 
 #ifndef FT_PING_H
 #define FT_PING_H

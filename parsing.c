@@ -44,20 +44,19 @@ int isoption(s_cmd* cmd,char* s){
 
 void parse_cmd(int ac, char **av, s_cmd *cmd){
     int i = 0;
-    //bool  has_dest = false;
+    bool  has_dest = false;
 
-    printf("[parse_cmd] ac = %d\n", ac);
     cmd->opt = calloc((size_t)ac, sizeof(char));
     if (cmd->opt == NULL)
         return;
     for (int j = 1; j < ac; j++){
-        printf("[parse_cmd] in for j = %d\n", j);
         if (isoption(cmd, av[j])){
-            write(1, "imhere", 6);
             for (size_t k = 1; k < strlen(av[j]); k++){
-                printf("av[%d][%ld] = %c\n", j, k, av[j][k]);
                 cmd->opt[i++] = av[j][k];
             }
+        }
+        else if(inet_pton(av[j]) && has_dest == false){
+
         }
     }
     cmd->opt[i] = '\0';
