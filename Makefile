@@ -4,10 +4,7 @@ CFLAGS = -Wall -Wextra -Werror
 TARGET = ft_ping
 
 SRC = main.c \
-		parsing.c \
-		init.c \
-		printer.c \
-		error.c
+		resolve.c		
 
 HEADERS = ft_ping.h
 OBJ_DIR = obj
